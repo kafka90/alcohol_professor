@@ -1,0 +1,119 @@
+a<body class="account separate-inputs boxed" data-page="signup">
+    <!-- BEGIN LOGIN BOX -->
+
+    <div class="container" id="article-write">
+        <div class="row">
+            <div class="col-sm-6 col-md-6 col-md-offset-3">
+                <div class="account-wall">
+                
+                    <i class="user-img icons-faces-users-03-2"></i>
+               
+                <!--
+                    <#% if @this_user.back_mail nil? %>
+                        <h3> 아직 입력 안됐어 </h3>
+                    <#% else %>
+                        <h3> <#%= @this_user.back_mail %> </h3>
+                    <#% end %>
+                -->
+                    
+                             
+            <!--  디비에 저장 시작  -->          
+                    
+                        <form action="/home/univ_select" method="POST" enctype="multipart/form-data">
+                            <div class = "row">
+                                
+                                <div class="col-sm-6">
+                                    <div class="append-icon">
+                                        
+                                            <input type="text" name="front_mail" id="front_mail" class="form-control form-white" placeholder="메일주소" required autofocus style="margin-top: 0px;" width="100%"  value="" >
+                                                                     
+                                        <i class="icon-user"></i>
+                                    </div>
+                                </div>                
+                                
+                                <div class="col-sm-6">
+                                    <div class="append-icon">
+                                        <div class="dropdown" >
+                                            <select name="univname" style="margin-top: 0px; margin-bottom: 0px;height: 38px;">
+                                              <option value="지메일">지메일</option>
+                                              <option value="네이버">네이버</option>
+                                              <option value="성균관대">성균관대</option>
+                                              <option value="성신여대">성신여대</option>
+                                              <option value="서울여대">서울여대</option>
+                                              <option value="숙명여대">숙명여대</option>
+                                            </select>                                       
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                            
+                            <button type="submit" id="submit-form" class="btn btn-lg btn-danger btn-block ladda-button" data-style="expand-left" style="margin-top: 10px;">
+                                <input type="submit" value="학교메일 등록하기">
+                            </button>                                    
+                        </form>   
+                        
+                        <a href="/home/email_send">
+                            <button type="submit" id="submit-form" class="btn btn-lg btn-danger btn-block ladda-button" data-style="expand-left" style="margin-top: 10px;">
+                                <input type="submit" value="인증메일 보내기">
+                            </button>                       
+                        </a>
+        
+                        
+            <!--  디비에 저장 끝  -->            
+                        
+                    <!--    
+                        <div class="row">
+                            <#%unless @mail_address == nil %>
+                               <h2> <#%= @mail_address %> </h2>
+                            <#% end %>
+                        </div>  
+                    -->
+                        <form action="/home/code_confirm" method="POST" enctype="multipart/form-data">              
+                            <div class="append-icon">
+                                <input type="password" name="confirm_code" id="confirm_code" class="form-control form-white password" placeholder="인증코드를 입력해주세요" required>
+                                <i class="icon-lock"></i>
+                            </div>   
+                            
+                            <center> 
+                                <button type="submit" id="submit-form" class="btn btn-lg btn-dark m-t-20" data-style="expand-left">
+                                    <input type="submit" value="학교인증하기">
+                                </button> 
+                            </center>
+                        </form> 
+                      
+                </div>
+            </div>
+        </div>
+        <p class="account-copyright">
+            <span>Copyright © 2015 </span><span>멋쟁이 공자처럼</span>&nbsp;&nbsp;&nbsp;<span>All rights reserved.</span>
+        </p>
+    </div>
+    
+    
+    <!-- END LOCKSCREEN BOX -->
+    <script src="../assets/global/plugins/jquery/jquery-1.11.1.min.js"></script>
+    <script src="../assets/global/plugins/jquery/jquery-migrate-1.2.1.min.js"></script>
+    <script src="../assets/global/plugins/gsap/main-gsap.min.js"></script>
+    <script src="../assets/global/plugins/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../assets/global/plugins/icheck/icheck.min.js"></script>
+    <script src="../assets/global/plugins/backstretch/backstretch.min.js"></script>
+    <script src="../assets/global/plugins/bootstrap-loading/lada.min.js"></script>
+    <!-- <script src="../assets/global/plugins/jquery-validation/jquery.validate.min.js"></script> -->
+    <!-- <script src="../assets/global/plugins/jquery-validation/additional-methods.min.js"></script> -->
+    <script src="../assets/global/js/plugins.js"></script>
+    <script src="../assets/global/js/pages/login-v1.js"></script>
+</body>
+
+
+<!-- 이메일 보내는 프로그램 주석처리-->
+
+<!--
+<h1>이메일 보내는 프로그램입니다</h1>
+<form action="/home/email_send" method="POST">
+    제목: <input type="text" name="title"><br>
+    내용 <br>
+    <textarea name="text"></textarea>
+    <input type="submit" value="보내기">
+</form>
+-->

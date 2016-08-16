@@ -1,0 +1,80 @@
+<body class="account separate-inputs" data-page="login" >
+  <div id =backgroundrgba>
+    <!-- BEGIN LOGIN BOX -->
+    <div class="container" id="login-block">
+        <div class="row">
+            <div class="col-sm-6 col-md-4 col-md-offset-4">
+                <div class="account-wall">
+                    <i class="user-img icons-faces-users-03"></i>
+                    
+                    
+<%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+  <%= devise_error_messages! %>
+
+<div class="append-icon">
+  <div class="field">
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true %>
+  </div>
+  <i class="icon-user"></i>
+</div>
+
+<br>
+
+<div class="append-icon">
+  <div class="field">
+    <%= f.label :university %>
+    <em>(학교명을 풀네임으로 적어주세요)</em>
+    <%= f.text_field :university, autofocus: true %>
+  </div>
+  <i class="icon-user"></i>
+</div>
+
+<br>
+
+<div class="append-icon">
+  <div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  </div>
+  <i class="icon-user"></i>
+</div>
+
+<br>
+
+<div class="append-icon m-b-20">
+  <div class="field">
+    <%= f.label :password %>
+    <% if @minimum_password_length %>
+    <em>(<%= @minimum_password_length %> characters minimum)</em>
+    <% end %><br />
+    <%= f.password_field :password, autocomplete: "off" %>
+  </div>
+  <i class="icon-lock"></i>
+</div>
+
+<div class="append-icon m-b-20">
+  <div class="field">
+    <%= f.label :password_confirmation %><br />
+    <%= f.password_field :password_confirmation, autocomplete: "off" %>
+  </div>
+    <i class="icon-lock"></i>
+</div>
+
+<div class="actions" style="text-align: center;">
+    <button type="submit" id="submit-form" class="btn btn-lg btn-danger btn-block ladda-button" data-style="expand-left">
+       <%= f.submit "Sign up" %>
+    </button>
+</div> 
+    
+<% end %>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+
+  <p class="account-copyright">
+            <span>Copyright © 2015 </span><span>멋쟁이 공자처럼</span>&nbsp;&nbsp;&nbsp;<span>All rights reserved.</span>
+  </p>

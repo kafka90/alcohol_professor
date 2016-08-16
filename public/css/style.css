@@ -1,0 +1,190 @@
+/*=============================================================================================
+                                intro 대문페이지 css모음 
+=============================================================================================*/
+    
+
+/*================================
+    GOOGLE FONT
+==================================*/
+
+@import url(http://fonts.googleapis.com/css?family=Lato); /* FREE GOOGLE FONTS */
+
+/*================================
+  GENERAL STYLES
+==================================*/
+
+body {
+   font-family: 'Lato', sans-serif;
+    line-height: 30px;
+    font-size: 14px;
+}
+
+section {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.pad-bottom {
+    padding-bottom: 70px;
+}
+
+.text-right {
+    text-align:right;
+}
+
+.head-line {
+ margin-bottom: 20px;
+line-height: 30px;
+font-size: 25px;
+color: #737373;
+}
+
+
+/*================================
+  HOME SECTION STYLES
+==================================*/
+
+#home {
+    background: url(../images/home.jpg) no-repeat center center; 
+    padding: 0;
+    -webkit-background-size: cover;
+    background-size: cover;
+    -moz-background-size: cover;    
+}
+
+    #home .overlay {
+        padding-top: 120px;
+        background-color: rgba(36, 36, 36, 0.8);
+        min-height: 710px;
+        padding-bottom: 40px;
+    }
+    
+     #home h1 {
+        margin-bottom: 20px;
+line-height: 50px;
+font-size: 50px;
+color: #FFD119;
+text-transform:uppercase;
+    }
+    
+    #home h4 {
+      margin-bottom: 30px;
+line-height: 40px;
+font-size: 20px;
+color: #fff;
+    }
+
+/*================================
+  BUTTON STYLES
+==================================*/
+.btn-custom {
+   min-height:60px;
+    border-radius:50px;
+-webkit-border-radius:30px;
+-moz-border-radius:30px;
+padding:15px 200px 15px 200px;
+-webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+   margin:25px 5px 5px 0px;
+}
+
+.btn-one {   
+background-color: transparent;
+border:5px solid #FFD119; 
+color:#fff;       
+  
+}
+ .btn-one:hover {
+ background-color:#FFD119;
+ color:#000;
+ text-decoration:none;
+    }
+
+ .btn-two {   
+background-color: #FFD119;
+border:5px solid #FFD119; 
+color:#000;       
+  
+}
+ .btn-two:hover {
+ background-color:transparent;
+ color:#fff;
+ text-decoration:none;
+    }
+.btn-three {   
+   
+background-color:transparent;
+border:5px solid #737373; 
+color:#000;       
+  
+}
+ .btn-three:hover {
+
+ background-color:#737373;
+ color:#fff;
+ text-decoration:none;
+    }
+
+ 
+ /*================================
+    ABOUT STYLES
+==================================*/
+
+ .icon-wrapper {
+    padding-bottom:20px;
+    padding-top:20px;
+    font-size:50px;
+}
+ 
+.img-side {
+    max-height:420px;
+}
+
+/*================================
+    FEATURES STYLES
+==================================*/
+#features {
+    background-color:rgba(234, 234, 234, 0.90);
+}
+/*================================
+    FOOTER SECTION STYLES
+ ============================  */
+footer {
+    padding:15px;
+    background-color:#FFD119;
+    color:#000;
+    }
+    footer a,footer a:hover,footer a:focus {
+        color:#fff;
+        text-decoration:none;
+        margin-right:10px;
+        margin-left:10px;
+    }
+
+
+/*================================
+    RESPONSIVE STYLES
+ ============================  */
+
+@media (min-width: 100px) and (max-width: 498px) {
+    #email-subscribe .form-control
+{
+display:block;
+width:100%;
+}
+
+#email-subscribe .btn-subscribe
+{
+margin-top:20px;
+}
+
+}
+
+
+/*=============================================================================================
+=============================================================================================*/
+
+/*=============================================================================================
+=============================================================================================*/
